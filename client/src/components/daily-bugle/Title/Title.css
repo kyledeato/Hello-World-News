@@ -1,0 +1,9 @@
+.daily-bugle-title {
+    width: 100%;
+    filter: grayscale(100%);
+}
+.daily-bugle-title:hover {
+    
+    filter: grayscale(0%);
+    transition: 0.3s;
+}

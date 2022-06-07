@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+.daily-bugle-headline {
+    font-size: 100px;
+    font-weight: 900;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+.daily-bugle-headline:hover {
+    background-color: black;
+    color: #F1F3F3;
+    transition: 0.5s;
+}
+
+.daily-bugle-headline-gif {
+    width: 100%;
+    filter: grayscale(100%);
+}
+
+.daily-bugle-headline-gif:hover {
+    filter: grayscale(0%);
+    transition: 0.3s;
+}

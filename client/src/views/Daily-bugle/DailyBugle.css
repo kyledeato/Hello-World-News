@@ -1,0 +1,45 @@
+.frontpage-bugle {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.left h2{
+    font-size: 50px;
+    font-weight: 900;
+    font-family: 'Roboto', sans-serif;
+    
+}
+.left {
+    border-right: 1px solid black;
+}
+.right {
+    padding-left: 10px;
+}
+.right h2 {
+    font-size: 40px;
+    font-weight: 900;
+    font-family: 'Roboto', sans-serif;
+}
+
+.beck {
+    width: 400px;
+    filter: grayscale(100%);
+}
+.beck:hover {
+    filter: grayscale(0%);
+    transition: 0.3s;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    background-color: black;
+    color: #F1F3F3;
+}
+.headerz:hover {
+    background-color: black;
+    transition: 0.5s;
+}
