@@ -38,16 +38,13 @@ const DisplayArticles = () => {
 
 
   useEffect(()=>{
-    console.log(id);
+
     const key = process.env.REACT_APP_SECRET_API_KEY
-    // const key ="key"
-    // const key = "981d7e46af2c4a10ab91de1b13f62854"
-    //const apiURL = `https://newsdata.io/api/1/news?apikey=${key}&category=${id===undefined?"top":id}&language=en`
     const apiURL = `https://newsapi.org/v2/top-headlines?country=us&category=${id==="top-headlines"?"":id}&apiKey=${key}`
-    console.log(apiURL);
+  
     axios.get(apiURL).then(response=>{
       
-      console.log(response)
+      
       setTitle1(response.data.articles[0].title)
       setTitle2(response.data.articles[1].title)
       setTitle3(response.data.articles[2].title)
