@@ -4,7 +4,7 @@ import "./Navlinks.css"
 const NavLinks = () => {
   return (
     <div className='nav-links'>
-        <Link to={"/top-headlines"} className='link'>TOP</Link>
+        <Link to={"/top"} className='link'>TOP</Link>
         <Link to={"/business"} className='link'>BUSINESS</Link>
         <Link to={"/entertainment"} className='link'>ENTERTAINMENT</Link>
 

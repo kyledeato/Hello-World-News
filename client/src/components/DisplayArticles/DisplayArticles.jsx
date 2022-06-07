@@ -40,40 +40,40 @@ const DisplayArticles = () => {
   useEffect(()=>{
 
     const key = process.env.REACT_APP_SECRET_API_KEY
-    const apiURL = `https://newsapi.org/v2/top-headlines?country=us&category=${id==="top-headlines"?"":id}&apiKey=${key}`
-  
+    const apiURL = `https://newsdata.io/api/1/news?apikey=${key}&language=en&category=${id===undefined?"top":id}`
+
     axios.get(apiURL).then(response=>{
       
+      console.log(response);
+      setTitle1(response.data.results[0].title)
+      setTitle2(response.data.results[1].title)
+      setTitle3(response.data.results[2].title)
+      setTitle4(response.data.results[3].title)
+      setTitle5(response.data.results[4].title)
       
-      setTitle1(response.data.articles[0].title)
-      setTitle2(response.data.articles[1].title)
-      setTitle3(response.data.articles[2].title)
-      setTitle4(response.data.articles[3].title)
-      setTitle5(response.data.articles[4].title)
-      
-      setDescription1(response.data.articles[0].description)
-      setDescription2(response.data.articles[1].description)
-      setDescription3(response.data.articles[2].description)
-      setDescription4(response.data.articles[3].description)
-      setDescription5(response.data.articles[4].description)
+      setDescription1(response.data.results[0].description)
+      setDescription2(response.data.results[1].description)
+      setDescription3(response.data.results[2].description)
+      setDescription4(response.data.results[3].description)
+      setDescription5(response.data.results[4].description)
 
-      setImage1(response.data.articles[0].urlToImage)
-      setImage2(response.data.articles[1].urlToImage)
-      setImage3(response.data.articles[2].urlToImage)
-      setImage4(response.data.articles[3].urlToImage)
-      setImage5(response.data.articles[4].urlToImage)
+      setImage1(response.data.results[0].image_url)
+      setImage2(response.data.results[1].image_url)
+      setImage3(response.data.results[2].image_url)
+      setImage4(response.data.results[3].image_url)
+      setImage5(response.data.results[4].image_url)
       
-      setLink1(response.data.articles[0].url)
-      setLink2(response.data.articles[1].url)
-      setLink3(response.data.articles[2].url)
-      setLink4(response.data.articles[3].url)
-      setLink5(response.data.articles[4].url)
+      setLink1(response.data.results[0].link)
+      setLink2(response.data.results[1].link)
+      setLink3(response.data.results[2].link)
+      setLink4(response.data.results[3].link)
+      setLink5(response.data.results[4].link)
 
-      setContent1(response.data.articles[0].content)
-      setContent2(response.data.articles[1].content)
-      setContent3(response.data.articles[2].content)
-      setContent4(response.data.articles[3].content)
-      setContent5(response.data.articles[4].content)
+      setContent1(response.data.results[0].content)
+      setContent2(response.data.results[1].content)
+      setContent3(response.data.results[2].content)
+      setContent4(response.data.results[3].content)
+      setContent5(response.data.results[4].content)
       
       // setAuthor1(response.data.articles[0].creator[0])
       // setAuthor2(response.data.articles[1].creator[0])

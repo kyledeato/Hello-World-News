@@ -5,7 +5,7 @@ const Article = props => {
   const {title, description, image, imageHeight, link, content ,ad, titleSize} = props
 
   const contentChar = (content) => {
-    console.log(content);
+
     if (content.length > 200){
       
       return content.substring(0,200)
@@ -21,8 +21,8 @@ const Article = props => {
         {/* <p className='description'>{description}</p>
         <br /> */}
         {content != null?
-        <p className='description'>{contentChar(content)} <a href={link} target="_blank" rel="noreferrer" className="article-links">Read More</a></p>:
-        <p className='description'>{description} <a href={link} target="_blank" rel="noreferrer" className="article-links">Read More</a></p>}
+        <p className='description'>{contentChar(content)} <a href={link} target="_blank" rel="noreferrer" className="article-links">-READ MORE</a></p>:
+        <p className='description'>{description} <a href={link} target="_blank" rel="noreferrer" className="article-links">-READ MORE</a></p>}
         {/* <img src={ad} alt="" /> */}
     </div>
   )
